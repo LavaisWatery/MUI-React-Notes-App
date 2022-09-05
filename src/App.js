@@ -1,9 +1,11 @@
 import { colors, createTheme, ThemeProvider } from "@mui/material";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Header from "./components/Header";
+import SiteLayout from "./components/SiteLayout";
 import CreatePage from "./pages/CreatePage";
 import HomePage from "./pages/HomePage";
 import ListPage from "./pages/ListPage";
+import Spam from "./pages/SpamPage";
+import TableList from "./pages/TableListPage";
 
 // Customize our theme, new secondary color, new font (this needs to be added in index.css)
 const theme = createTheme({
@@ -23,14 +25,16 @@ function App() {
     // Router and routes
     return (
     <ThemeProvider theme={theme}>
-      <Header/> 
-
       <BrowserRouter>
-        <Routes>
-          <Route path='/' element={<HomePage/>}/>
-          <Route path='/create' element={<CreatePage/>}/>
-          <Route path='/list' element={<ListPage/>}/>
-        </Routes>
+        <SiteLayout>
+          <Routes>
+            <Route path='/' element={<HomePage/>}/>
+            <Route path='/create' element={<CreatePage/>}/>
+            <Route path='/list' element={<ListPage/>}/>
+            <Route path='/tablelist' element={<TableList/>}/>
+            <Route path='/spam' element={<Spam/>}/>
+          </Routes>
+        </SiteLayout>
       </BrowserRouter>
     </ThemeProvider>
   );

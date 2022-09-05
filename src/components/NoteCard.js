@@ -9,7 +9,7 @@ export default function NoteCard({note, deleteHandle}) {
                     <IconButton onClick={() => deleteHandle(note.id)}>
                         <DeleteOutlined />
                     </IconButton>
-                } title={note.noteTitle} subheader="test">
+                } title={note.noteTitle}>
                 </CardHeader> 
 
                 <CardContent>
