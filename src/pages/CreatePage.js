@@ -20,7 +20,7 @@ export default function CreatePage() {
     const handleSubmit = (event) => {
         event.preventDefault(); 
 
-        fetch('http://localhost:8000/notes', { // Fetch and send a post request
+        fetch('http://127.0.0.1:8000/notes', { // Fetch and send a post request
             method: 'POST',
             headers: {"Content-type": "application/json"},
             body: JSON.stringify({noteTitle, noteDetails})

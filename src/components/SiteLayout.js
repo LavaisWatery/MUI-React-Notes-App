@@ -51,7 +51,7 @@ export default function SiteLayout({ children }) {
 
     return (
         <div className={classes.root}>
-            <Drawer variant="permanent"  anchor="center" sx={{width: 240,".MuiDrawer-paper": {width: 240}}}>
+            <Drawer variant="permanent" sx={{width: 240,".MuiDrawer-paper": {width: 240}}}>
                 <div>
                     <Typography sx={{textAlign: "center"}} variant="h5">
                         MUI Notes 

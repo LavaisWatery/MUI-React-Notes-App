@@ -8,7 +8,7 @@ export default function TableList() {
 
     // Fetch all the notes from our json server
     useEffect(() => {
-        fetch('http://localhost:8000/notes')
+        fetch('http://127.0.0.1:8000/notes')
         .then(res => res.json())
         .then(data => setNotes(data));
     }, []);
